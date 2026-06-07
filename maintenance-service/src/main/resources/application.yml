@@ -1,0 +1,11 @@
+server:
+  port: 4004
+
+spring:
+  application:
+    name: maintenance
+  main:
+    banner-mode: off
+
+hotelos:
+  broker-url: ws://localhost:4005/broker
