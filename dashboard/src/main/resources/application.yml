@@ -1,0 +1,12 @@
+server:
+  port: 4000
+
+spring:
+  application:
+    name: dashboard
+  main:
+    banner-mode: off
+
+hotelos:
+  broker-url: ws://localhost:4005/broker
+  auth-token: demo-token

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HotelOS — Operations Dashboard</title>
+  <link rel="stylesheet" href="app.css">
+</head>
+<body>
+  <header>
+    <h1>HotelOS</h1>
+    <div id="conn-status" class="badge offline">connecting…</div>
+  </header>
+
+  <main>
+    <section id="auth-gate" class="gate">
+      <h2>Sign in</h2>
+      <p>Enter the operations token to view live state.</p>
+      <input id="token" type="password" placeholder="demo-token" value="demo-token">
+      <button id="signin">Sign in</button>
+      <div id="auth-error" class="error"></div>
+    </section>
+
+    <section id="board" class="hidden">
+      <div class="row">
+        <div class="card">
+          <h3>Rooms <span id="rooms-count" class="count"></span></h3>
+          <div id="rooms" class="grid"></div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="card">
+          <h3>Room Service Orders <span id="orders-count" class="count"></span></h3>
+          <table id="orders">
+            <thead><tr><th>#</th><th>Room</th><th>Status</th><th>Total</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+
+        <div class="card">
+          <h3>Maintenance Queue <span id="issues-count" class="count"></span></h3>
+          <table id="issues">
+            <thead><tr><th>#</th><th>Room</th><th>Urgency</th><th>Assigned</th><th>Issue</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="card">
+          <h3>Live Event Log</h3>
+          <ul id="log"></ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
