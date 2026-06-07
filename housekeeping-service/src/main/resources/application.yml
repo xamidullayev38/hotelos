@@ -1,0 +1,11 @@
+server:
+  port: 4002
+
+spring:
+  application:
+    name: housekeeping
+  main:
+    banner-mode: off
+
+hotelos:
+  broker-url: ws://localhost:4005/broker
